@@ -17,5 +17,6 @@
 
 void TIM3_Int_Init(u16 arr,u16 psc);
 void TIM3_PWM_Init(u16 arr,u16 psc);
+void PWM_Set(int Frequency);
 
 #endif

@@ -85,7 +85,9 @@ u8 USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
 //bit14，	接收到0x0d
 //bit13~0，	接收到的有效字节数目
 u16 USART_RX_STA=0;       //接收状态标记	  
-  
+
+const u16 Baud_Rate[16] = {96,12,24,48,96,144,192,384,430,576,768,1152,1280,2304,2560,4608};
+
 void uart_init(u32 bound){
   //GPIO端口设置
   GPIO_InitTypeDef GPIO_InitStructure;

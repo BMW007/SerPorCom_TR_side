@@ -93,3 +93,10 @@ void TIM3_PWM_Init(u16 arr,u16 psc)
 	TIM_Cmd(TIM3, ENABLE);  //Ê¹ÄÜTIM3
 	
 }
+
+void PWM_Set(int Frequency)
+{
+	double fp = 36000000/Frequency;
+	TIM3_PWM_Init(fp-1,2);
+	TIM_SetCompare2(TIM3,fp/2);		   	
+}
